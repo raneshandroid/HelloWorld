@@ -2,6 +2,7 @@ package com.example.helloworld;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,5 +30,10 @@ public class MainActivity extends AppCompatActivity {
         ++mCount;
         if (mShowCount != null)
             mShowCount.setText(Integer.toString(mCount));
+    }
+
+    public void navigateToScrollable(View view) {
+        Intent intent = new Intent(MainActivity.this, ScrollableActivity.class);
+        startActivity(intent);
     }
 }
